@@ -1,1 +1,1 @@
-and rarely do i things that are useful
+and rarely do i do things that are useful
