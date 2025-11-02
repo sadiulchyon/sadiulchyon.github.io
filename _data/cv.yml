@@ -2,11 +2,11 @@
   type: map
   contents:
     - name: Full Name
-      value: Martin Bulla
+      value: Md Sadiul Alam Chyon
     - name: Date of Birth
-      value: 31st August 1981
+      value: 4th April 1991
     - name: Languages
-      value: English, German, Czech <em>native</em>, Slovak, Russian <em>basic</em>
+      value: Bangla, English
 
 - title: Experience
   type: time_table
