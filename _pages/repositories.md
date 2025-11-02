@@ -3,7 +3,7 @@ layout: page
 permalink: /repos/
 title: repos
 description: selected
-nav: true
+nav: false
 nav_order: 3
 ---
 
