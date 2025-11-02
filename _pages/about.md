@@ -2,27 +2,28 @@
 layout: about
 title: about
 permalink: /
-subtitle:  <a href='https://www.nature.com/articles/nature20563'>Biorhythms</a>, <a href='https://onlinelibrary.wiley.com/doi/full/10.1111/ele.13662'>macroecology & evolution</a>, <a href='https://osf.io/profile/'>open science</a>, <a href='https://www.youtube.com/channel/UCP8ITIDaFZHW68z7KaTyDew'>shorebirds</a>.
+subtitle: "Sand & Gravel Mining (SGM), River Geomorphology, Remote Sensing, Water Resources Engineering"
 profile:
   align: right
-  image: me_&_kohout_bw_kohout-pop_grey.jpg
+  image: IMG_0422.jpg
   image_circular: false # crops the image to make it circular
   address: >
+    <p>Room no - 1054, Natural History Building</p>
+    <p>University of Illinois</p>
 
 news: false  # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
-I strive to understand the World within and around me. 
+**As a scientist**, I use rivers and sediments to explore
 
-As a **scientist**, I use birds, mainly shorebirds, to explore 
-- <a href='https://www.nature.com/articles/s41598-019-41223-z'>rhythms of parental care</a> and <a href='https://doi.org/10.3389/fevo.2019.00093'>how such rhythms emerge</a>, 
--  <a href='https://www.nature.com/articles/nature20563'>within- and between-species differences in rhythmicities</a> and what may drive such differences, as well as
-- <a href='https://onlinelibrary.wiley.com/doi/full/10.1111/ele.13662'>distribution and evolution of traits across the globe</a>
+* the socio-environmental impacts of sand and gravel mining and how extraction reshapes river corridors,
+* how changes in sediment supply alter channel form, incision, and flood risk, and
+* spatial patterns of sediment transport and landscape response across scales.
 
-**Currently**, I am investigating global similarities in shorebird parental care, global differences in uniparental incubation of shorebirds, biorhythms of red knots and drivers of global variation in the song of songbirds.  
+**Currently**, I am quantifying mining-driven morphological change with remote sensing and field measurements, linking those changes to flood vulnerability and community impacts, and developing reproducible tools (GIS + scripts) to monitor extraction and sediment budgets.
 
-I am an **associate professor** at   [Czech University of Life Sciences Prague](https://www.czu.cz/en) and **collaborate** with [scientists and institutions across the globe](https://doi.org/10.1126/science.aaw8529). 
+I am a **PhD student, Geography & GIS, University of Illinois at Urbana-Champaign**, and I collaborate with field teams and policy partners to translate results into practical guidance for sustainable river management.
 
-I am a regular contributor to <a href='https://www.inaturalist.org/people/1583651'>iNaturalist</a>. 
+I contribute to open data, reproducible code, and outreach that makes geomorphology useful and accessible.
