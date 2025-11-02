@@ -5,7 +5,7 @@ permalink: /
 subtitle: "Sand & Gravel Mining (SGM), River Geomorphology, Remote Sensing, Water Resources Engineering"
 profile:
   align: right
-  image: IMG_0422.jpg
+  image: IMG_0422.JPG
   image_circular: false # crops the image to make it circular
   address: >
     <p>Room no - 1054, Natural History Building</p>
