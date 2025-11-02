@@ -8,7 +8,7 @@ profile:
   image: dp1.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>Room no - 1054, Natural History Building</p>
+    <p>Room no - 1054, Natural History Building, </p>
     <p>University of Illinois</p>
 
 news: false  # includes a list of news items
@@ -16,7 +16,9 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
-**As a scientist**, I use rivers and sediments to explore
+I strive to understand the rivers and climb the mountains. 
+
+**As a scientist**, I explore
 
 * the socio-environmental impacts of sand and gravel mining and how extraction reshapes river corridors,
 * how changes in sediment supply alter channel form, incision, and flood risk, and
