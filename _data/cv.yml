@@ -4,41 +4,150 @@
     - name: Full Name
       value: Md Sadiul Alam Chyon
     - name: Date of Birth
-      value: 4th April 1991
+      value: 4 April 1991
     - name: Languages
       value: Bangla, English
+    - name: Email
+      value: mchyon2@illinois.edu
+    - name: Phone
+      value: +1 (217) 417-7215
 
-- title: Experience
-  type: time_table
+- title: Research Interests (1–2 lines)
+  type: list
   contents:
-    - title: Graduate Reserach Assistant
-      institution: University of Illinois Urbana-Champaign, USA
-      year: 2021 - 2025
-    - title: Civil Engineer
-      institution: Bangladesh Water Development Board, Bangladesh
-      year: 2016 - 2021
-    - title: Research Fellow
-      institution: South Asian Water (SAWA) Fellowship Program, Bangladesh, India, Nepal, SriLanka
-      year: 2015 - 2017  
-    - title: Lecturer
-      institution: World University Bangladesh, Bangladesh
-      year: 2015 - 2016
-    - title: Intern
-      institution: Institute of Water Modeling, Bangladesh
-      year: 2015 - 2015
+    - Riverine sand and gravel mining impacts and recovery; sediment extraction monitoring; geomorphic change detection; socio-environmental fieldwork; watershed-scale decision support.
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD Candidate in Rivers, Watershed & Landscape Dynamics
-      institution: University of Illinois Urbana-Champaign, USA
-      year: 2021 - present
-    - title: MSc in Water Resources Development
-      institution:  Bangladesh University of Science & Technology, Bangladesh
-      year: 2020
-    - title: BSc in Water Resources Engineering
-      institution: Bangladesh University of Science & Technology, Bangladesh
+    - title: PhD (Expected Spring 2026), Geography
+      institution: University of Illinois Urbana-Champaign (https://illinois.edu)
+      year: 2021 - Present
+    - title: MSc, Water Resources Development
+      institution: Bangladesh University of Engineering & Technology (https://www.buet.ac.bd)
+      year: 2021
+    - title: BSc, Water Resources Engineering
+      institution: Bangladesh University of Engineering & Technology (https://www.buet.ac.bd)
       year: 2015
-    - title: 12th Grade in Science
-      institution: Sylhet Cadet College
-      year: 2009  
+
+- title: Research Experience
+  type: time_table
+  contents:
+    - title: Research Assistant (Advisor: Dr. Jim Best)
+      institution: Department of Geography & GIS, University of Illinois Urbana-Champaign (https://ggis.illinois.edu)
+      year: 2021 - Present
+      description:
+        - Quantified multi-decadal sediment extraction and land-water change using Google Earth Engine and machine learning to support watershed-scale decision making.
+        - Estimated geomorphic disturbance and recovery from gravel mining using remote sensing and field-informed methods.
+        - Diagnosed community and land-use impacts of aggregate extraction using mixed-methods fieldwork with riverine stakeholders to inform community-centered watershed planning.
+        - Automated monitoring of sediment transport and extraction intensity using deep learning and high-resolution satellite imagery to generate spatio-temporal hotspot metrics.
+        - Translated socio-ecological evidence into governance and restoration recommendations.
+    - title: Research Assistant (Advisor: Dr. M. Shahjahan Mondal)
+      institution: Institute of Water and Flood Management, BUET (https://www.buet.ac.bd)
+      year: 2019 - 2021
+      description:
+        - Modeled flood vulnerability risk in Madaripur Sadar Upazila using a calibrated HEC-HMS hydrologic model and coupled HEC-RAS 1D/2D hydraulic model.
+    - title: Undergraduate Researcher (Advisor: Dr. Ataur Rahman)
+      institution: Department of Water Resources Engineering, BUET (https://www.buet.ac.bd)
+      year: 2014 - 2015
+      description:
+        - Controlled flume study of horizontal slotted submerged breakwaters; evaluated hydraulic performance coefficients.
+
+- title: Teaching & Mentoring Experience
+  type: time_table
+  contents:
+    - title: Teaching Assistant
+      institution: Department of Geography & GIS, University of Illinois Urbana-Champaign (https://ggis.illinois.edu)
+      year: Fall 2022 - Fall 2023
+      description:
+        - Earth’s Physical Systems (Fall 2023): designed and delivered lab sessions.
+        - Global Development & Environment; Social & Environmental Issues (Fall 2022, Spring 2023): graded assignments; proctored exams.
+    - title: Adjunct Lecturer, Department of Civil Engineering
+      institution: Bangabandhu Sheikh Mujibur Rahman Science & Technology University (https://www.bsmrstu.edu.bd)
+      year: Spring 2018, Fall 2018
+      description:
+        - Taught GIS & Remote Sensing; Fluid Mechanics; designed and delivered lectures for ~60 students.
+    - title: Mentoring (Roepke Summer Undergraduate Scholars)
+      institution: University of Illinois Urbana-Champaign (https://illinois.edu)
+      year: 2021 - Present
+      description:
+        - Mentored 3 undergraduate scholars on deep-learning training data creation (image annotation), drone imagery collection/processing, qualitative field surveys, and research communication.
+
+- title: Professional Experience
+  type: time_table
+  contents:
+    - title: Civil Engineer
+      institution: Bangladesh Water Development Board (https://www.bwdb.gov.bd)
+      year: 2016 - 2020
+      description:
+        - Co-managed ~$2M project planning and implementation (work plans, coordination, reporting).
+        - Catchment hydrologic analyses/models for drainage and flood-risk decisions.
+        - Designs and quantity/cost estimates for hydraulic structures and riverbank protection.
+        - Supervised construction and field QA/QC for hydraulic and bank-stabilization works.
+    - title: Intern, River Morphology Division
+      institution: Institute of Water Modeling (https://www.iwmbd.org)
+      year: Aug 2015
+
+- title: Technical Skills
+  type: list
+  contents:
+    - Programming: Python (PyTorch, YOLOvX)
+    - Geospatial/Remote Sensing: ArcGIS Pro, Google Earth Engine
+    - Hydraulics/Morphodynamics: HEC-RAS, HEC-HMS, Delft3D
+    - Writing/Typesetting: LaTeX
+
+- title: Fellowships, Awards & Grants
+  type: list
+  contents:
+    - Russel Fellowship (2024 - 2025): $25,000
+    - Schlesinger Research Travel Grant (2022, 2023, 2024): $1,000 each year
+    - Graduate Student Summer Field Research Award (2021, 2022, 2023): $500 each year
+    - Dissertation Travel Grant (2023): $6,000
+    - Fred W. and D. Foster Graduate Fellowship in Geography (2021): $4,000
+    - South Asian Water Fellowship (2015 - 2016): $5,700
+
+- title: Academic Service
+  type: list
+  contents:
+    - Co-Chair, River Morphodynamics, Symposium on River, Coastal and Estuarine Morphodynamics (2023)
+    - Reviewer, Springer Nature Social Sciences (Since 2024)
+
+- title: Invited Talks & Posters
+  type: list
+  contents:
+    - AGU Fall Meeting, New Orleans, LA (Talk) | Dec 18, 2025
+    - SESE Research Review, Champaign, IL (Poster, Best Poster Award) | Feb 2, 2024
+    - Symposium on River, Coastal and Estuarine Morphodynamics, Champaign, IL (Talk) | Sep 27, 2023
+    - AGU Fall Meeting, San Francisco, CA (Poster) | Dec 11, 2023
+    - AGU Fall Meeting, Chicago, IL (Poster) | Dec 15, 2022
+
+- title: Publications
+  type: nested_list
+  contents:
+    - title: Journal Articles
+      items:
+        - "From extraction to recovery: Geomorphic and social transformations of gravel mining, Lubha River, Northeast Bangladesh. Cell Reports Sustainability 3(1):100605 (2026). Preprint: https://papers.ssrn.com/abstract=5222439 (DOI: https://doi.org/10.2139/ssrn.5222439)"
+        - "Integrated assessment of flood risk in Arial Khan floodplain of Bangladesh under changing climate and socioeconomic conditions. Journal of Flood Risk Management 16(2):e12876 (2023). DOI: https://doi.org/10.1111/jfr3.12876"
+        - "Comparative Study on Hydrodynamic Performance of Porous and Non-Porous Submerged Breakwater. Procedia Engineering 194:203-210 (2017). DOI: https://doi.org/10.1016/j.proeng.2017.08.136"
+        - "Hydrodynamic and Morphological Impact of Hydraulic Structural Interventions: An Investigative Case Study on Feni-Muhuri River System of Bangladesh. Journal of Water Resources and Pollution Studies 2(2):1-15 (2017). https://matjournals.co.in/index.php/JoWRPS/article/view/6853"
+    - title: Journal Articles (Under Review)
+      items:
+        - "Global patterns, drivers, and impacts of riverine sand and gravel mining: Implications for sustainable management. Reviews of Geophysics (Under review, 2025)."
+        - "Estimating soil organic carbon by integrating mid-infrared spectroscopy with explainable machine learning. Sensing & Bio-Sensing Research (Under review, 2025)."
+    - title: Book Review
+      items:
+        - "Water Use and Poverty Reduction (Md. Fakhrul Islam). SAWAS Journal 8(1) (June 2018)."
+    - title: Conference Proceedings
+      items:
+        - "Assessment of different dimensions of irrigation water security in a coastal polder of Bangladesh. 6th International Conference on Water & Flood Management, Dhaka, Bangladesh (Nov 17, 2017)."
+        - "Gender analysis of irrigation projects: Mahaweli irrigation project vs Carchi irrigation project. 6th International Conference on Water & Flood Management, Dhaka, Bangladesh (Nov 17, 2017)."
+        - "Laboratory study on performance of horizontal slotted submerged breakwater. 3rd ICCESD, Khulna, Bangladesh (Feb 12-14, 2016)."
+
+- title: References
+  type: nested_list
+  contents:
+    - title: Academic / Professional
+      items:
+        - "James L. Best (PhD Advisor), UIUC | jimbest@illinois.edu | +1 (217) 244-1839"
+        - "Murugesu Sivapalan (Committee Member), UIUC | sivapala@illinois.edu | +1 (217) 333-2675"
+        - "Christopher Hackney (Collaborator), Newcastle University | christopher.hackney@ncl.ac.uk | +44 191 208 7920"
