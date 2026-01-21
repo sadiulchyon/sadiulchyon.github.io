@@ -3,14 +3,12 @@
   contents:
     - name: Full Name
       value: Md Sadiul Alam Chyon
-    - name: Date of Birth
-      value: 4 April 1991
     - name: Languages
       value: Bangla, English
     - name: Email
       value: mchyon2@illinois.edu
     - name: Phone
-      value: +1 (217) 417-7215
+      value: "+1 (217) 417-7215"
 
 - title: Research Interests
   type: list
@@ -21,35 +19,85 @@
   type: time_table
   contents:
     - title: PhD (Expected Spring 2026), Geography
-      institution: University of Illinois Urbana-Champaign (https://illinois.edu)
-      year: 2021 - Present
+      institution: University of Illinois Urbana-Champaign
+      year: "2021 - Present"
     - title: MSc, Water Resources Development
-      institution: Bangladesh University of Engineering & Technology (https://www.buet.ac.bd)
-      year: 2021
+      institution: Bangladesh University of Engineering & Technology
+      year: "2021"
     - title: BSc, Water Resources Engineering
-      institution: Bangladesh University of Engineering & Technology (https://www.buet.ac.bd)
-      year: 2015
+      institution: Bangladesh University of Engineering & Technology
+      year: "2015"
 
 - title: Research Experience
   type: time_table
   contents:
-    - "title: Research Assistant (Advisor: Dr. Jim Best)
-      institution: Department of Geography & GIS, University of Illinois Urbana-Champaign (https://ggis.illinois.edu)
-      year: 2021 - Present
+    - title: "Research Assistant (Advisor: Dr. Jim Best)"
+      institution: Department of Geography & GIS, University of Illinois Urbana-Champaign
+      year: "2021 - Present"
       description:
         - Quantified multi-decadal sediment extraction and land-water change using Google Earth Engine and machine learning to support watershed-scale decision making.
         - Estimated geomorphic disturbance and recovery from gravel mining using remote sensing and field-informed methods.
         - Diagnosed community and land-use impacts of aggregate extraction using mixed-methods fieldwork with riverine stakeholders to inform community-centered watershed planning.
         - Automated monitoring of sediment transport and extraction intensity using deep learning and high-resolution satellite imagery to generate spatio-temporal hotspot metrics.
         - Translated socio-ecological evidence into governance and restoration recommendations.
-    - title: Research Assistant (Advisor: Dr. M. Shahjahan Mondal)
-      institution: Institute of Water and Flood Management, BUET (https://www.buet.ac.bd)
-      year: 2019 - 2021
+    - title: "Research Assistant (Advisor: Dr. M. Shahjahan Mondal)"
+      institution: Institute of Water and Flood Management, BUET
+      year: "2019 - 2021"
       description:
         - Modeled flood vulnerability risk in Madaripur Sadar Upazila using a calibrated HEC-HMS hydrologic model and coupled HEC-RAS 1D/2D hydraulic model.
-    - title: Undergraduate Researcher (Advisor: Dr. Ataur Rahman)
-      institution: Department of Water Resources Engineering, BUET (https://www.buet.ac.bd)
-      year: 2014 - 2015
+    - title: "Undergraduate Researcher (Advisor: Dr. Ataur Rahman)"
+      institution: Department of Water Resources Engineering, BUET
+      year: "2014 - 2015"
       description:
-        - Controlled flume study of horizontal slotted submerged breakwaters; evaluated hydraulic performance coefficients."
+        - Controlled flume study of horizontal slotted submerged breakwaters; evaluated hydraulic performance coefficients.
+
+- title: Teaching & Mentoring Experience
+  type: time_table
+  contents:
+    - title: Teaching Assistant
+      institution: Department of Geography & GIS, University of Illinois Urbana-Champaign
+      year: "Fall 2022 - Fall 2023"
+      description:
+        - "Earth’s Physical Systems (Fall 2023): designed and delivered lab sessions."
+        - "Global Development & Environment; Social & Environmental Issues (Fall 2022, Spring 2023): graded assignments; proctored exams."
+    - title: "Adjunct Lecturer, Department of Civil Engineering"
+      institution: Bangabandhu Sheikh Mujibur Rahman Science & Technology University
+      year: "Spring 2018, Fall 2018"
+      description:
+        - "Taught GIS & Remote Sensing; Fluid Mechanics; designed and delivered lectures for ~60 students."
+    - title: "Mentoring (Roepke Summer Undergraduate Scholars)"
+      institution: University of Illinois Urbana-Champaign
+      year: "2021 - Present"
+      description:
+        - Mentored 3 undergraduate scholars on deep-learning training data creation (image annotation), drone imagery collection/processing, qualitative field surveys, and research communication.
+
+- title: Professional Experience
+  type: time_table
+  contents:
+    - title: Civil Engineer
+      institution: Bangladesh Water Development Board
+      year: "2016 - 2020"
+      description:
+        - "Co-managed ~$2M project planning and implementation (work plans, coordination, reporting)."
+        - Catchment hydrologic analyses/models for drainage and flood-risk decisions.
+        - Designs and quantity/cost estimates for hydraulic structures and riverbank protection.
+        - Supervised construction and field QA/QC for hydraulic and bank-stabilization works.
+    - title: "Intern, River Morphology Division"
+      institution: Institute of Water Modeling
+      year: "Aug 2015"
+
+- title: Technical Skills
+  type: list
+  contents:
+    - "Programming: Python (PyTorch, YOLOv)"
+    - "Geospatial/Remote Sensing: ArcGIS Pro, Google Earth Engine"
+    - "Hydraulics/Morphodynamics: HEC-RAS, HEC-HMS"
+    - "Scripting/Typesetting: LaTeX"
+
+
+
+
+
+
+
 
