@@ -17,3 +17,39 @@
   contents:
     - Riverine sand and gravel mining impacts and recovery; sediment extraction monitoring; geomorphic change detection; socio-environmental fieldwork; watershed-scale decision support.
 
+- title: Education
+  type: time_table
+  contents:
+    - title: PhD (Expected Spring 2026), Geography
+      institution: University of Illinois Urbana-Champaign (https://illinois.edu)
+      year: 2021 - Present
+    - title: MSc, Water Resources Development
+      institution: Bangladesh University of Engineering & Technology (https://www.buet.ac.bd)
+      year: 2021
+    - title: BSc, Water Resources Engineering
+      institution: Bangladesh University of Engineering & Technology (https://www.buet.ac.bd)
+      year: 2015
+
+- title: Research Experience
+  type: time_table
+  contents:
+    - "title: Research Assistant (Advisor: Dr. Jim Best)
+      institution: Department of Geography & GIS, University of Illinois Urbana-Champaign (https://ggis.illinois.edu)
+      year: 2021 - Present
+      description:
+        - Quantified multi-decadal sediment extraction and land-water change using Google Earth Engine and machine learning to support watershed-scale decision making.
+        - Estimated geomorphic disturbance and recovery from gravel mining using remote sensing and field-informed methods.
+        - Diagnosed community and land-use impacts of aggregate extraction using mixed-methods fieldwork with riverine stakeholders to inform community-centered watershed planning.
+        - Automated monitoring of sediment transport and extraction intensity using deep learning and high-resolution satellite imagery to generate spatio-temporal hotspot metrics.
+        - Translated socio-ecological evidence into governance and restoration recommendations.
+    - title: Research Assistant (Advisor: Dr. M. Shahjahan Mondal)
+      institution: Institute of Water and Flood Management, BUET (https://www.buet.ac.bd)
+      year: 2019 - 2021
+      description:
+        - Modeled flood vulnerability risk in Madaripur Sadar Upazila using a calibrated HEC-HMS hydrologic model and coupled HEC-RAS 1D/2D hydraulic model.
+    - title: Undergraduate Researcher (Advisor: Dr. Ataur Rahman)
+      institution: Department of Water Resources Engineering, BUET (https://www.buet.ac.bd)
+      year: 2014 - 2015
+      description:
+        - Controlled flume study of horizontal slotted submerged breakwaters; evaluated hydraulic performance coefficients."
+
