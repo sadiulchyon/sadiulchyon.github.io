@@ -10,17 +10,17 @@
     - name: Phone
       value: "+1 (217) 417-7215"
 
-- title: Research Interests
-  type: list
-  contents:
-    - Riverine sand and gravel mining impacts and recovery; sediment extraction monitoring; geomorphic change detection; socio-environmental fieldwork; watershed-scale decision support.
+#- title: Research Interests
+  #type: list
+  #contents:
+    #- Riverine sand and gravel mining impacts and recovery; sediment extraction monitoring; geomorphic change detection; socio-environmental fieldwork; watershed-scale decision support.
 
 - title: Education
   type: time_table
   contents:
     - title: PhD (Expected Spring 2026), Geography
       institution: University of Illinois Urbana-Champaign
-      year: "2021 - Present"
+      year: "2021 - "
     - title: MSc, Water Resources Development
       institution: Bangladesh University of Engineering & Technology
       year: "2021"
@@ -33,7 +33,7 @@
   contents:
     - title: "Research Assistant (Advisor: Dr. Jim Best)"
       institution: Department of Geography & GIS, University of Illinois Urbana-Champaign
-      year: "2021 - Present"
+      year: "2021 - "
       description:
         - Quantified multi-decadal sediment extraction and land-water change using Google Earth Engine and machine learning to support watershed-scale decision making.
         - Estimated geomorphic disturbance and recovery from gravel mining using remote sensing and field-informed methods.
@@ -62,12 +62,12 @@
         - "Global Development & Environment; Social & Environmental Issues (Fall 2022, Spring 2023): graded assignments; proctored exams."
     - title: "Adjunct Lecturer, Department of Civil Engineering"
       institution: Bangabandhu Sheikh Mujibur Rahman Science & Technology University
-      year: "Spring 2018, Fall 2018"
+      year: "2018"
       description:
         - "Taught GIS & Remote Sensing; Fluid Mechanics; designed and delivered lectures for ~60 students."
     - title: "Mentoring (Roepke Summer Undergraduate Scholars)"
       institution: University of Illinois Urbana-Champaign
-      year: "2021 - Present"
+      year: "2021 - "
       description:
         - Mentored 3 undergraduate scholars on deep-learning training data creation (image annotation), drone imagery collection/processing, qualitative field surveys, and research communication.
 
