@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /publications/
-title: Journal Articles
+title:
 description: 
 years: [2026, 2023, 2017]
 nav: true
