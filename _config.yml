@@ -1,6 +1,29 @@
+# _config.yml — master configuration file for the Jekyll site.
+# Changes here affect the entire site. Restart the local server after editing.
+# Sections:
+#   1.  Site settings         — name, URL, description, favicon
+#   2.  Theme                 — code highlight & repo card color schemes
+#   3.  RSS Feed              — RSS toggle
+#   4.  Layout                — navbar/footer behaviour, page width
+#   5.  Open Graph            — social media preview cards
+#   6.  Social integration    — profile links shown in navbar & footer
+#   7.  Analytics             — Google Analytics, search console verification
+#   8.  Blog                  — blog name, pagination, comments, external feeds
+#   9.  Collections           — Jekyll collections (news, projects)
+#   10. Jekyll settings       — markdown, plugins, include/exclude paths
+#   11. Jekyll Minifier       — HTML/CSS/JS minification on build
+#   12. Jekyll Archives       — blog archive pages by year/tag/category
+#   13. Jekyll Scholar        — academic publications & citation formatting
+#   14. Responsive WebP Images— auto-generate optimised images via ImageMagick
+#   15. Jekyll Diagrams       — diagram rendering (optional)
+#   16. Optional Features     — toggle site features on/off
+#   17. Library versions      — pinned CDN versions for Bootstrap, jQuery, etc.
 # -----------------------------------------------------------------------------
-# Site settings
+
 # -----------------------------------------------------------------------------
+# 1. Site settings
+# -----------------------------------------------------------------------------
+# Core identity of the site: your name, URL, description, and favicon.
 
 title: Sadiul Chyon # the website title (if blank, full name will be used instead)
 first_name: Md Sadiul Alam
@@ -23,8 +46,9 @@ last_updated: true # set to true if you want to display last updated in the foot
 impressum_path:  # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 
 # -----------------------------------------------------------------------------
-# Theme
+# 2. Theme
 # -----------------------------------------------------------------------------
+# Color schemes for code blocks and GitHub repo cards (light & dark mode).
 
 # code highlighter theme
 highlight_theme_light: github   # https://github.com/jwarby/jekyll-pygments-themes
@@ -35,16 +59,17 @@ repo_theme_light: default       # https://github.com/anuraghazra/github-readme-s
 repo_theme_dark: dark           # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 
 # -----------------------------------------------------------------------------
-# RSS Feed
+# 3. RSS Feed
 # -----------------------------------------------------------------------------
-# will use title and url fields
-# Take a look to https://github.com/jekyll/jekyll-feed for more customization
+# Set rss_icon: true to show an RSS icon in the footer.
+# Uses the site title and URL. See https://github.com/jekyll/jekyll-feed for more.
 
 rss_icon: false
 
 # -----------------------------------------------------------------------------
-# Layout
+# 4. Layout
 # -----------------------------------------------------------------------------
+# Controls navbar/footer stickiness and the maximum content width.
 
 navbar_fixed: true
 footer_fixed: true
@@ -55,48 +80,59 @@ max_width: 800px
 # TODO: add layout settings (single page vs. multi-page)
 
 # -----------------------------------------------------------------------------
-# Open Graph & Schema.org
+# 5. Open Graph & Schema.org
 # -----------------------------------------------------------------------------
-# Display links to the page with a preview object on social media.
+# Controls rich preview cards when your pages are shared on social media.
+# Set serve_og_meta: true and provide og_image to enable link previews.
 serve_og_meta: false # Include Open Graph meta tags in the HTML head
 serve_schema_org: false # Include Schema.org in the HTML head
 og_image: # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
-# Social integration
+# 6. Social integration
 # -----------------------------------------------------------------------------
+# Fill in your usernames/IDs to display social icons in the navbar and footer.
+# Leave blank to hide. Filled entries appear automatically — no other changes needed.
 
-github_username: sadiulchyon # your GitHub user name
-gitlab_username: # your GitLab user name
-twitter_username: # your Twitter handle
-linkedin_username: # your LinkedIn user name
+# --- Academic ---
 scholar_userid: tzGlZCkAAAAJ&hl=en&oi=ao # your Google Scholar ID
 semanticscholar_id: # your Semantic Scholar ID
 orcid_id: 0009-0006-4509-8058 # your ORCID ID
-medium_username: # your Medium username
-quora_username: # your Quora username
-publons_id: # your ID on Publons F-2946-2011 
+publons_id: # your ID on Publons
 research_gate_profile: # your profile on ResearchGate
-blogger_url: # your blogger URL
-work_url: # work page URL
-keybase_username: # your keybase user name
-wikidata_id: # your wikidata id
 dblp_url: # your DBLP profile url
-stackoverflow_id: # your stackoverflow id 6318684 
+
+# --- Developer ---
+github_username: sadiulchyon # your GitHub user name
+gitlab_username: # your GitLab user name
+stackoverflow_id: # your stackoverflow id
 kaggle_id: # your kaggle id
-lastfm_id: # your lastfm id
-spotify_id: # your spotify id
-pinterest_id: # your pinterest id
-unsplash_id: # your unsplash id
+
+# --- Social media ---
+twitter_username: # your Twitter handle
+linkedin_username: # your LinkedIn user name
 instagram_id: # your instagram id
 facebook_id: Saadi.Chayon # your facebook id
 discord_id: # your discord id (18-digit unique numerical identifier)
 
+# --- Other ---
+medium_username: # your Medium username
+quora_username: # your Quora username
+blogger_url: # your blogger URL
+work_url: # work page URL
+keybase_username: # your keybase user name
+wikidata_id: # your wikidata id
+lastfm_id: # your lastfm id
+spotify_id: # your spotify id
+pinterest_id: # your pinterest id
+unsplash_id: # your unsplash id
+
 contact_note: > #You can even add a little note about which of these is the best way to reach you.
 
 # -----------------------------------------------------------------------------
-# Analytics and search engine verification
+# 7. Analytics and search engine verification
 # -----------------------------------------------------------------------------
+# Add your IDs to enable tracking. Toggle each on/off in section 16 below.
 
 google_analytics:  # your Goole Analytics measurement ID (format: G-XXXXXXXXXX)
 panelbear_analytics:  # panelbear analytics site ID (format: XXXXXXXXX)
@@ -105,8 +141,9 @@ google_site_verification:  # your google-site-verification ID (Google Search Con
 bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 
 # -----------------------------------------------------------------------------
-# Blog
+# 8. Blog
 # -----------------------------------------------------------------------------
+# Controls the blog page title, URL format, pagination, comments, and external feeds.
 
 blog_name: random thoughts # blog_name will be displayed in your blog page
 blog_nav_title: blog # your blog must have a title for it to be displayed in the nav bar
@@ -129,8 +166,10 @@ external_sources:
     rss_url: https://medium.com/@al-folio/feed
 
 # -----------------------------------------------------------------------------
-# Collections
+# 9. Collections
 # -----------------------------------------------------------------------------
+# Jekyll collections let you group related content (news, projects).
+# Each collection gets its own folder (e.g. _news/, _projects/) and permalink.
 
 collections:
   news:
@@ -146,8 +185,10 @@ news_scrollable: true # adds a vertical scroll bar if there are more than 3 news
 news_limit: 5 # leave blank to include all the news in the `_news` folder
 
 # -----------------------------------------------------------------------------
-# Jekyll settings
+# 10. Jekyll settings
 # -----------------------------------------------------------------------------
+# Core Jekyll configuration: markdown parser, syntax highlighting,
+# which folders to include/exclude from the build, and active plugins.
 
 # Markdown and syntax highlight
 markdown: kramdown
@@ -197,8 +238,9 @@ defaults:
       sitemap: false
 
 # -----------------------------------------------------------------------------
-# Jekyll Minifier
+# 11. Jekyll Minifier
 # -----------------------------------------------------------------------------
+# Automatically minifies HTML, CSS, and JS on build to reduce page load times.
 
 jekyll-minifier:
   exclude: ['robots.txt']
@@ -206,8 +248,9 @@ jekyll-minifier:
     harmony: true
 
 # -----------------------------------------------------------------------------
-# Jekyll Archives
+# 12. Jekyll Archives
 # -----------------------------------------------------------------------------
+# Generates archive pages for blog posts grouped by year, tag, and category.
 
 jekyll-archives:
   enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
@@ -223,8 +266,10 @@ jekyll-archives:
 display_tags: ['formatting', 'images', 'links', 'math', 'code'] # this tags will be dispalyed on the front page of your blog
 
 # -----------------------------------------------------------------------------
-# Jekyll Scholar
+# 13. Jekyll Scholar
 # -----------------------------------------------------------------------------
+# Renders your publications from a BibTeX file (_bibliography/papers.bib).
+# Your name is highlighted automatically in author lists.
 
 scholar:
 
@@ -260,8 +305,10 @@ more_authors_animation_delay: 10  # more authors are revealed on click using ani
 
 
 # -----------------------------------------------------------------------------
-# Responsive WebP Images
+# 14. Responsive WebP Images
 # -----------------------------------------------------------------------------
+# Auto-converts images in assets/img/ to WebP and resizes them on build.
+# Disable (enabled: false) if ImageMagick is not installed locally.
 
 imagemagick:
   enabled: true # enables responsive images for your site (recomended, see https://github.com/alshedivat/al-folio/issues/537)
@@ -280,8 +327,9 @@ imagemagick:
     webp: "-resize 800x"
 
 # -----------------------------------------------------------------------------
-# Jekyll Diagrams
+# 15. Jekyll Diagrams
 # -----------------------------------------------------------------------------
+# Renders diagrams (Mermaid, Graphviz, etc.) in posts and pages. Optional.
 
 jekyll-diagrams:
     # configuration, see https://github.com/zhustec/jekyll-diagrams.
@@ -289,8 +337,9 @@ jekyll-diagrams:
 
 
 # -----------------------------------------------------------------------------
-# Optional Features
+# 16. Optional Features
 # -----------------------------------------------------------------------------
+# Toggle site features on (true) or off (false) without touching any other files.
 
 enable_google_analytics:    true  # enables google analytics
 enable_panelbear_analytics: false  # enables panelbear analytics
@@ -309,8 +358,10 @@ enable_medium_zoom:         true   # enables image zoom feature (as on medium.co
 
 
 # -----------------------------------------------------------------------------
-# Library versions
+# 17. Library versions
 # -----------------------------------------------------------------------------
+# Pinned CDN versions for all front-end libraries. Update here to upgrade.
+# Do not change unless you know the new version is compatible.
 
 academicons:
   version: "1.9.1"
