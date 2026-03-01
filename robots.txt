@@ -1,6 +1,10 @@
 ---
 permalink: /robots.txt
 ---
+# robots.txt — tells search engine crawlers which pages they can index.
+# "User-agent: *" applies to all crawlers; "Disallow:" with no path means
+# everything on this site is allowed to be crawled and indexed.
+# The Sitemap line helps crawlers discover all pages faster.
 User-agent: *
 Disallow:
 
