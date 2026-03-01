@@ -2,6 +2,13 @@
 # Each memory can have: title, description, date, image, video (YouTube embed URL), tags, type (photo/video)
 # Images should be placed in /assets/img/memories/
 
+- title: "Installing Perforated Vertical Drains"
+  description: "On-site installation of perforated vertical drains (PVDs) during ground improvement works. PVDs accelerate consolidation of soft soils by shortening the drainage path — a technique I applied hands-on early in my engineering career."
+  date: "2019-12-01"
+  image: "/assets/img/memories/pvd.jpg"
+  tags: [fieldwork, engineering]
+  type: photo
+
 - title: "First Field Survey"
   description: "Early morning trek through the mudflats — our first shorebird count of the season. The stillness before sunrise made it unforgettable."
   date: "2024-04-12"
