@@ -1,0 +1,45 @@
+# Memories data file
+# Each memory can have: title, description, date, image, video (YouTube embed URL), tags, type (photo/video)
+# Images should be placed in /assets/img/memories/
+
+- title: "First Field Survey"
+  description: "Early morning trek through the mudflats — our first shorebird count of the season. The stillness before sunrise made it unforgettable."
+  date: "2024-04-12"
+  image: "/assets/img/memories/field_survey.jpg"
+  tags: [fieldwork, shorebirds]
+  type: photo
+
+- title: "Lab Retreat 2024"
+  description: "A weekend away with the whole team. Great science, better food, and a lot of laughs by the campfire."
+  date: "2024-08-03"
+  image: "/assets/img/memories/lab_retreat.jpg"
+  tags: [lab, team]
+  type: photo
+
+- title: "Conference Talk — ESA 2024"
+  description: "Presented our chronobiology findings to a packed room at the Ecological Society of America annual meeting in Long Beach."
+  date: "2024-08-13"
+  image: "/assets/img/memories/esa_talk.jpg"
+  tags: [conference, ESA]
+  type: photo
+
+- title: "Fieldwork at the Coast"
+  description: "Knee-deep in mud, counting birds, and loving every second of it. The coastal ecosystem in full bloom."
+  date: "2024-05-20"
+  video: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  tags: [fieldwork, coast]
+  type: video
+
+- title: "Graduation Day"
+  description: "A day worth celebrating. Years of hard work, countless late nights, and endless cups of coffee — finally paid off."
+  date: "2023-12-15"
+  image: "/assets/img/memories/graduation.jpg"
+  tags: [milestone, celebration]
+  type: photo
+
+- title: "Sunrise at the Wetlands"
+  description: "Nothing beats the golden hour over the wetlands. A quiet morning that reminded me exactly why I got into this field."
+  date: "2024-09-07"
+  image: "/assets/img/memories/wetlands_sunrise.jpg"
+  tags: [nature, fieldwork]
+  type: photo
