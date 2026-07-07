@@ -130,3 +130,24 @@
   image: "/assets/img/memories/508560870_10233095562145533_3676395532305615312_n.jpg"
   tags: [travel, mountains, milestone]
   type: photo
+
+- title: "Autumn walk"
+  description: "A walk through a forest carpeted in fallen leaves, fall colors overhead."
+  date: "2024-10-01"
+  image: "/assets/img/memories/592383025_10235388041056073_971083788482154081_n.jpg"
+  tags: [milestone]
+  type: photo
+
+- title: "A quiet moment"
+  description: "A close-up from a quiet moment together."
+  date: "2024-10-02"
+  image: "/assets/img/memories/655142413_10236982344592665_1980642072563167243_n.jpg"
+  tags: [milestone]
+  type: photo
+
+- title: "Above the snow line"
+  description: "Sitting above the treeline with snow-covered peaks behind."
+  date: "2024-10-03"
+  image: "/assets/img/memories/655677868_10237036958077968_109562110978013795_n.jpg"
+  tags: [travel, mountains, milestone]
+  type: photo

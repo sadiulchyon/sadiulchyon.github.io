@@ -1,4 +1,7 @@
 # GitHub profile(s) to feature on the /repos/ page.
-# Add entries to github_repos (owner/repo) once you have specific repositories you want to showcase.
+# Add entries to github_repos (owner/repo) for specific repositories you want to showcase.
 github_users:
   - sadiulchyon
+
+github_repos:
+  - sadiulchyon/afeefa-a-life-remembered
