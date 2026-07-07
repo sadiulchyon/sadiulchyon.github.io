@@ -2,10 +2,10 @@
 layout: page
 title: projects
 permalink: /projects/
-description:
-nav: false
+description: Selected research and engineering projects on river geomorphology, flood risk, and remote sensing.
+nav: true
 nav_order: 1
-display_categories: [science, other fun]
+display_categories: [research, engineering]
 horizontal: false
 ---
 

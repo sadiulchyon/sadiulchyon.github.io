@@ -16,6 +16,9 @@ layout: default
       {%- assign posts = site.posts -%}
     {%- endif -%}
 
+    {%- if posts.size == 0 -%}
+    <p>No posts yet — check back soon.</p>
+    {%- endif -%}
     <ul class="post-list">
       {%- for post in posts -%}
       <li>

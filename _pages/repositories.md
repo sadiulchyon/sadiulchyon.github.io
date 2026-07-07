@@ -1,13 +1,28 @@
 ---
 layout: page
 permalink: /repos/
-title: repos
-description: selected
-nav: false
+title: job trail
+description: A chronological trail through research, teaching, and professional roles.
+nav: true
 nav_order: 3
 ---
 
-### GitHub users
+<div class="cv">
+{%- for entry in site.data.cv -%}
+  {%- if entry.title == "Research Experience" or entry.title == "Professional Experience" or entry.title == "Teaching & Mentoring Experience" -%}
+  <div class="card mt-3 p-3">
+    <h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
+    <div>
+      {% include cv/time_table.html %}
+    </div>
+  </div>
+  {%- endif -%}
+{%- endfor -%}
+</div>
+
+---
+
+### GitHub
 
 {% if site.data.repositories.github_users %}
 <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
@@ -16,10 +31,6 @@ nav_order: 3
   {% endfor %}
 </div>
 {% endif %}
-
----
-
-### GitHub Repositories
 
 {% if site.data.repositories.github_repos %}
 <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">

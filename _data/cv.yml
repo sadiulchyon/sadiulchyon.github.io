@@ -82,9 +82,60 @@
         - Catchment hydrologic analyses/models for drainage and flood-risk decisions.
         - Designs and quantity/cost estimates for hydraulic structures and riverbank protection.
         - Supervised construction and field QA/QC for hydraulic and bank-stabilization works.
-    #- title: "Intern, River Morphology Division"
-      #institution: Institute of Water Modeling
-      #year: "Aug 2015"
+    - title: "Intern, River Morphology Division"
+      institution: Institute of Water Modeling (IWM)
+      year: "Aug 2015"
+
+- title: Fellowships, Awards & Grants
+  type: time_table
+  contents:
+    - title: Russel Fellowship
+      year: "2024 - 2025"
+      description:
+        - "$25,000"
+    - title: Dissertation Travel Grant
+      year: "2023"
+      description:
+        - "$6,000"
+    - title: Schlesinger Research Travel Grant
+      year: "2022 - 2024"
+      description:
+        - "$1,000 each year"
+    - title: Graduate Student Summer Field Research Award
+      year: "2021 - 2023"
+      description:
+        - "$500 each year"
+    - title: Fred W. and D. Foster Graduate Fellowship in Geography
+      year: "2021"
+      description:
+        - "$4,000"
+    - title: South Asian Water Fellowship
+      year: "2015 - 2016"
+      description:
+        - "$5,700"
+
+- title: Academic Service
+  type: time_table
+  contents:
+    - title: "Reviewer, Springer Nature Social Sciences"
+      year: "Since 2024"
+    - title: "Co-Chair, River Morphodynamics"
+      institution: Symposium on River, Coastal and Estuarine Morphodynamics
+      year: "2023"
+
+- title: Invited Talks & Posters
+  type: time_table
+  contents:
+    - title: "AGU Fall Meeting, New Orleans, LA (Talk)"
+      year: "2025"
+    - title: "SESE Research Review, Champaign, IL (Poster) — Awarded Best Poster"
+      year: "2024"
+    - title: "Symposium on River, Coastal and Estuarine Morphodynamics, Champaign, IL (Talk)"
+      year: "2023"
+    - title: "AGU Fall Meeting, San Francisco, CA (Poster)"
+      year: "2023"
+    - title: "AGU Fall Meeting, Chicago, IL (Poster)"
+      year: "2022"
 
 - title: Technical Skills
   type: list
