@@ -16,6 +16,12 @@ nav_order: 6
     </p>
   </div>
 
+  {%- if site.data.memories.size == 0 -%}
+  <div class="memories-empty" style="display:flex;">
+    <i class="fas fa-photo-video"></i>
+    <p>Nothing here yet — check back soon for photos and videos from the field.</p>
+  </div>
+  {%- else -%}
   <!-- Filter tags -->
   <div class="memories-filters" id="memoriesFilters">
     <button class="memory-filter-btn active" data-filter="all">All</button>
@@ -85,6 +91,7 @@ nav_order: 6
     <i class="fas fa-photo-video"></i>
     <p>No memories found for this filter.</p>
   </div>
+  {%- endif -%}
 
 </div>
 

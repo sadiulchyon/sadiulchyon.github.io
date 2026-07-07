@@ -1,6 +1,5 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
-
-"PhysRev":
-  url: https://journals.aps.org/
+# Journal/venue abbreviations + links, used to badge publications. Add entries as needed, e.g.:
+#
+# "JFRM":
+#   url: https://onlinelibrary.wiley.com/journal/1753318x
+#   color: "#00369f"
