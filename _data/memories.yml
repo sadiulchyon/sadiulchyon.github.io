@@ -2,5 +2,131 @@
 # Each memory can have: title, description, date, image, video (YouTube embed URL), tags, type (photo/video)
 # Images should be placed in /assets/img/memories/
 #
-# Intentionally empty for now — add real entries here as photos/videos become available.
-[]
+# Dates below are best guesses from what's visible in each photo (season, conference banners, etc.) —
+# please correct any that are wrong.
+
+- title: "Installing Perforated Vertical Drains"
+  description: "On-site installation of perforated vertical drains (PVDs) during ground improvement works. PVDs accelerate consolidation of soft soils by shortening the drainage path — a technique I applied hands-on early in my engineering career."
+  date: "2019-12-01"
+  image: "/assets/img/memories/pvd.jpg"
+  tags: [fieldwork, engineering]
+  type: photo
+
+- title: "AGU Fall Meeting with labmates"
+  description: "With colleagues from the department at the AGU Fall Meeting exhibit hall, and grabbing a bite together after a long day of sessions."
+  date: "2023-12-01"
+  image: "/assets/img/memories/505071230_10232962168010763_7633640689812166445_n.jpg"
+  tags: [conference, milestone]
+  type: photo
+
+- title: "Chicago Riverwalk at night"
+  description: "The skyline lit up along the Riverwalk during the AGU Fall Meeting in Chicago."
+  date: "2022-12-15"
+  image: "/assets/img/memories/505221283_10232962171250844_6812302491554658931_n.jpg"
+  tags: [conference, travel]
+  type: photo
+
+- title: "Golden hour on Powell Street"
+  description: "San Francisco's cable car line lit up in the evening sun during a break from the AGU Fall Meeting."
+  date: "2023-12-11"
+  image: "/assets/img/memories/505239143_10232955728209772_5123396143948150651_n.jpg"
+  tags: [conference, travel]
+  type: photo
+
+- title: "Alpenglow on Half Dome"
+  description: "The last light of the day catching the top of Half Dome, Yosemite Valley."
+  date: "2023-12-20"
+  image: "/assets/img/memories/504885284_10232962170930836_620031104026685758_n.jpg"
+  tags: [travel, yosemite]
+  type: photo
+
+- title: "Twilight over El Capitan"
+  description: "El Capitan and Half Dome fading into blue twilight after sunset in Yosemite Valley."
+  date: "2023-12-20"
+  image: "/assets/img/memories/505426820_10232962170850834_841843326922713798_n.jpg"
+  tags: [travel, yosemite]
+  type: photo
+
+- title: "A group hike through Yosemite"
+  description: "Bundled up for a winter hike through Yosemite Valley with friends."
+  date: "2023-12-21"
+  image: "/assets/img/memories/505114147_10232962170770832_5507514575049888124_n.jpg"
+  tags: [travel, yosemite, milestone]
+  type: photo
+
+- title: "Driving through Grand Teton"
+  description: "Storm clouds breaking over the road through Grand Teton National Park."
+  date: "2024-06-01"
+  image: "/assets/img/memories/502584366_10232877406331774_5206557920511797403_n.jpg"
+  tags: [travel, mountains]
+  type: photo
+
+- title: "Biking beneath the Tetons"
+  description: "Cycling a valley trail with the Teton range rising in the background."
+  date: "2024-06-01"
+  image: "/assets/img/memories/502585738_10232877407251797_6142530990687998862_n.jpg"
+  tags: [travel, mountains]
+  type: photo
+
+- title: "Stargazing at a desert camp"
+  description: "Clear skies and a faint dust of stars over a desert campsite."
+  date: "2024-01-01"
+  image: "/assets/img/memories/497506998_10232614289474017_968199380894279992_n.jpg"
+  tags: [travel]
+  type: photo
+
+- title: "Fieldwork along the Atlantic coast"
+  description: "Picking a way along a narrow, wave-cut coastal path — helmets on for the loose rock underfoot."
+  date: "2024-07-01"
+  image: "/assets/img/memories/505299389_10233024863538112_1001707993110200145_n.jpg"
+  tags: [fieldwork, coast]
+  type: photo
+
+- title: "Sea thrift on the coastal rock"
+  description: "Sea thrift blooming in the cracks of a wave-cut rock platform, Atlantic coast."
+  date: "2024-07-01"
+  image: "/assets/img/memories/652686782_10236964567908259_5881133966151371994_n.jpg"
+  tags: [fieldwork, coast]
+  type: photo
+
+- title: "Waves against the rocky shore"
+  description: "Swells breaking against a rocky headland on a grey, windy day."
+  date: "2024-07-02"
+  image: "/assets/img/memories/505113567_10233024868138227_8861972222621720731_n.jpg"
+  tags: [travel, coast]
+  type: photo
+
+- title: "A break on the coastal trail"
+  description: "Taking a breather on a coastal bluff trail, with a few fellow hikers cresting the ridge behind."
+  date: "2024-07-02"
+  image: "/assets/img/memories/505129649_10232955726849738_1906948589551563707_n.jpg"
+  tags: [travel, coast]
+  type: photo
+
+- title: "Sunset over the tide pools"
+  description: "The sky lighting up orange over a rocky shoreline as the tide rolls in."
+  date: "2024-07-03"
+  image: "/assets/img/memories/505318058_10232955729489804_4962254301273852683_n.jpg"
+  tags: [travel, coast]
+  type: photo
+
+- title: "Above an alpine lake"
+  description: "Looking out over a turquoise alpine lake tucked below a ring of peaks."
+  date: "2024-08-01"
+  image: "/assets/img/memories/506437124_10233095562945553_2136845474061941400_n.jpg"
+  tags: [travel, mountains]
+  type: photo
+
+- title: "A high mountain lake"
+  description: "A quiet alpine lake sitting below a bare, rocky ridge."
+  date: "2024-08-02"
+  image: "/assets/img/memories/506457222_10233095558065431_4519099313394167592_n.jpg"
+  tags: [travel, mountains]
+  type: photo
+
+- title: "Stream crossing with friends"
+  description: "A stop at a mountain stream crossing partway through a group hike."
+  date: "2024-08-03"
+  image: "/assets/img/memories/508560870_10233095562145533_3676395532305615312_n.jpg"
+  tags: [travel, mountains, milestone]
+  type: photo
