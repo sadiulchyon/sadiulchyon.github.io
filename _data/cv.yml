@@ -10,15 +10,10 @@
     - name: Phone
       value: "+1 (217) 417-7215"
 
-#- title: Research Interests
-  #type: list
-  #contents:
-    #- Riverine sand and gravel mining impacts and recovery; sediment extraction monitoring; geomorphic change detection; socio-environmental fieldwork; watershed-scale decision support.
-
 - title: Education
   type: time_table
   contents:
-    - title: PhD (Expected Spring 2026), Geography
+    - title: PhD (Expected Fall 2026), Geography & GIScience
       institution: University of Illinois Urbana-Champaign
       year: "2021 - "
     - title: MSc, Water Resources Development
@@ -35,30 +30,32 @@
       institution: Department of Geography & GIS, University of Illinois Urbana-Champaign
       year: "2021 - "
       description:
-        - Quantified multi-decadal sediment extraction and land-water change using Google Earth Engine and machine learning to support watershed-scale decision making.
-        - Estimated geomorphic disturbance and recovery from gravel mining using remote sensing and field-informed methods.
+        - Quantified multi-decadal sediment extraction and land-water change using Landsat and Sentinel-2 time series in Google Earth Engine and machine-learning workflows to support river-system analysis and watershed-scale decision making.
+        - Developed reproducible geospatial workflows and shareable code repositories for Google Earth Engine analysis, satellite-data acquisition, river-change monitoring, and GIS/remote-sensing teaching materials.
+        - Estimated geomorphic disturbance and recovery from gravel mining using remote sensing and field-informed methods; characterized grain-size distributions and sediment budget components from field surveys and pit volume analysis to constrain extraction rates relative to natural sediment supply.
         - Diagnosed community and land-use impacts of aggregate extraction using mixed-methods fieldwork with riverine stakeholders to inform community-centered watershed planning.
-        - Automated monitoring of sediment transport and extraction intensity using deep learning and high-resolution satellite imagery to generate spatio-temporal hotspot metrics.
+        - Built a spatial AI pipeline using YOLO26, PyTorch, GPU-enabled model training, and high-resolution Planet imagery to detect sediment-transport vessels and generate spatio-temporal extraction-intensity metrics.
         - Translated socio-ecological evidence into governance and restoration recommendations.
     - title: "Research Assistant (Advisor: Dr. M. Shahjahan Mondal)"
       institution: Institute of Water and Flood Management, BUET
       year: "2019 - 2021"
       description:
-        - Modeled flood vulnerability risk in Madaripur Sadar Upazila using a calibrated HEC-HMS hydrologic model and coupled HEC-RAS 1D/2D hydraulic model.
-    - title: "Undergraduate Researcher (Advisor: Dr. Ataur Rahman)"
+        - Developed a calibrated HEC-HMS hydrologic model and coupled HEC-RAS 1D/2D hydraulic model for the Arial Khan floodplain to assess flood hazard, exposure, and vulnerability under climate and socioeconomic scenarios.
+        - Validated model outputs using observed hydrologic data and spatial flood evidence, producing applied flood-risk maps for water-resources planning and climate-risk assessment.
+    - title: "Undergraduate Student (Advisor: Dr. Ataur Rahman)"
       institution: Department of Water Resources Engineering, BUET
       year: "2014 - 2015"
       description:
-        - Controlled flume study of horizontal slotted submerged breakwaters; evaluated hydraulic performance coefficients.
+        - Conducted a controlled flume study of horizontal slotted submerged breakwaters, evaluating hydraulic performance coefficients.
 
 - title: Teaching & Mentoring Experience
   type: time_table
   contents:
     - title: Teaching Assistant
       institution: Department of Geography & GIS, University of Illinois Urbana-Champaign
-      year: "2022 - 2023"
+      year: "2022 - "
       description:
-        - "Earth’s Physical Systems (Fall 2023): designed and delivered lab sessions."
+        - "Earth’s Physical Systems (Fall 2023, Spring 2026): designed and delivered lab sessions."
         - "Global Development & Environment; Social & Environmental Issues (Fall 2022, Spring 2023): graded assignments; proctored exams."
     - title: "Adjunct Lecturer, Department of Civil Engineering"
       institution: Bangabandhu Sheikh Mujibur Rahman Science & Technology University
@@ -86,10 +83,44 @@
       institution: Institute of Water Modeling (IWM)
       year: "Aug 2015"
 
+- title: Conference Presentations
+  type: time_table
+  contents:
+    - title: "\"From Extraction to Recovery: Understanding the Geomorphological and Social Transformations of Gravel Mining.\" Oral presentation, AGU Fall Meeting, New Orleans, LA"
+      year: "2025"
+    - title: "\"The Rise and Demise of Riverine Gravel Mining, Lubhachorra, NE Bangladesh: Impacts on Physical and Human Landscapes.\" Poster, AGU Fall Meeting, Washington, DC"
+      year: "2024"
+    - title: "Poster presentation, SESE Research Review, Champaign, IL — Awarded Best Poster"
+      year: "2024"
+    - title: "\"Quantification of Alluvial Sand Mining in Bangladesh through Detection and Tracking of Sand Transport Vessels.\" Poster, AGU Fall Meeting, San Francisco, CA"
+      year: "2023"
+    - title: "\"Geospatial Exploration of Planform of the Ganges River of Bangladesh.\" Oral presentation, 13th Symposium on River, Coastal & Estuarine Morphodynamics (RCEM), Urbana, IL"
+      year: "2023"
+    - title: "\"Extensive Alluvial Sand Mining and its Geomorphological Impacts in North-Eastern Bangladesh.\" Poster, AGU Fall Meeting, Chicago, IL"
+      year: "2022"
+    - title: "\"The Tale of How a Menacing Virus Temporarily Improved the Natural Environment of the Long-Polluted Dhaka City.\" AGU Fall Meeting, Virtual"
+      year: "2020"
+
+- title: Technical Skills
+  type: list
+  contents:
+    - "Satellite Remote Sensing: Landsat, Sentinel-1, Sentinel-2, Planet (PlanetScope/SkySat), Google Earth Engine"
+    - "Geospatial & Simulation Tools: ArcGIS Pro, QGIS, HEC-RAS, HEC-HMS, Delft3D"
+    - "Programming, Reproducibility & Open Workflows: Python, R, Git/GitHub, reproducible Google Earth Engine scripts, shareable code repositories, LaTeX"
+    - "Machine Learning & Spatial AI: PyTorch, YOLO26, U-Net segmentation, GPU-enabled model training (Colab Pro), object detection, geospatial machine learning, explainable machine learning"
+
+- title: Selected Code Repositories
+  type: list
+  contents:
+    - "<a href='https://github.com/sadiulchyon/gee_someshwari'>sadiulchyon/gee_someshwari</a>: Google Earth Engine scripts for monitoring seasonal sand-bar and water-dynamics change in the Someshwari River."
+    - "<a href='https://github.com/sadiulchyon/gravel-mining-in-sylhet'>sadiulchyon/gravel-mining-in-sylhet</a>: Code and materials for mixed-methods analysis of gravel-mining impacts in the Lubha River."
+    - "<a href='https://github.com/sadiulchyon/planet-downloader'>sadiulchyon/planet-downloader</a> and <a href='https://github.com/sadiulchyon/s2-downloader'>sadiulchyon/s2-downloader</a>: Satellite-data acquisition workflows for Planet and Sentinel-2 imagery."
+    - "<a href='https://github.com/sadiulchyon/ggis103-labs'>sadiulchyon/ggis103-labs</a> and <a href='https://github.com/sadiulchyon/teaching-portfolio'>sadiulchyon/teaching-portfolio</a>: GIScience, remote-sensing, and teaching-material repositories."
+
 - title: Fellowships, Awards & Grants
   type: time_table
   contents:
-    - title: Russel Fellowship
+    - title: Russell Fellowship
       year: "2024 - 2025"
       description:
         - "$25,000"
@@ -114,33 +145,11 @@
       description:
         - "$5,700"
 
-- title: Academic Service
+- title: Academic Service & Peer Review
   type: time_table
   contents:
-    - title: "Reviewer, Springer Nature Social Sciences"
-      year: "Since 2024"
-    - title: "Co-Chair, River Morphodynamics"
+    - title: "Reviewer: The Extractive Industries and Society; SN Social Sciences; Journal of Flood Risk Management; Frontiers in Climate"
+      year: "2025 - 2026"
+    - title: "Co-Chair, River Morphodynamics session"
       institution: Symposium on River, Coastal and Estuarine Morphodynamics
       year: "2023"
-
-- title: Invited Talks & Posters
-  type: time_table
-  contents:
-    - title: "AGU Fall Meeting, New Orleans, LA (Talk)"
-      year: "2025"
-    - title: "SESE Research Review, Champaign, IL (Poster) — Awarded Best Poster"
-      year: "2024"
-    - title: "Symposium on River, Coastal and Estuarine Morphodynamics, Champaign, IL (Talk)"
-      year: "2023"
-    - title: "AGU Fall Meeting, San Francisco, CA (Poster)"
-      year: "2023"
-    - title: "AGU Fall Meeting, Chicago, IL (Poster)"
-      year: "2022"
-
-- title: Technical Skills
-  type: list
-  contents:
-    - "Programming: Python (PyTorch, YOLO)"
-    - "Geospatial/Remote Sensing: ArcGIS Pro, Google Earth Engine"
-    - "Hydraulics/Morphodynamics: HEC-RAS, HEC-HMS"
-    - "Scripting/Typesetting: LaTeX"
