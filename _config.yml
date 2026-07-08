@@ -208,7 +208,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
-  - cms-oauth
+  - admin-api
 keep_files:
   - CNAME
   - .nojekyll
