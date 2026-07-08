@@ -1,0 +1,74 @@
+backend:
+  name: github
+  repo: sadiulchyon/sadiulchyon.github.io
+  branch: master
+  # TODO: replace with your deployed Firebase Function URL (no trailing slash).
+  # It will look like https://us-central1-<your-firebase-project-id>.cloudfunctions.net/oauth
+  base_url: https://us-central1-YOUR-FIREBASE-PROJECT-ID.cloudfunctions.net/oauth
+  auth_endpoint: auth
+
+publish_mode: simple
+media_folder: "assets/img/memories"
+public_folder: "/assets/img/memories"
+
+collections:
+  - name: "memories"
+    label: "Memories"
+    files:
+      - name: "memories"
+        label: "Photo & Video Memories"
+        file: "_data/memories.yml"
+        fields:
+          - label: "Memories"
+            name: "memories"
+            widget: "list"
+            summary: "{{title}} — {{date}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
+              - label: "Type"
+                name: "type"
+                widget: "select"
+                options: ["photo", "video"]
+                default: "photo"
+              - { label: "Image", name: "image", widget: "image", required: false, hint: "Only needed for photo entries." }
+              - { label: "Video embed URL", name: "video", widget: "string", required: false, hint: "Only needed for video entries, e.g. a YouTube embed URL." }
+              - label: "Tags"
+                name: "tags"
+                widget: "list"
+                field: { label: "Tag", name: "tag", widget: "string" }
+                required: false
+
+  - name: "projects"
+    label: "Projects"
+    folder: "_projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Image", name: "img", widget: "image", required: false }
+      - { label: "Importance", name: "importance", widget: "number", hint: "Lower numbers show first." }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options: ["research", "engineering"]
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "news"
+    label: "News"
+    folder: "_news"
+    create: true
+    slug: "announcement-{{fields.date}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - label: "Inline"
+        name: "inline"
+        widget: "boolean"
+        default: true
+        hint: "On: shows as a short one-line item. Off: shows as a full post with a title."
+      - { label: "Title", name: "title", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
