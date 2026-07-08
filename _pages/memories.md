@@ -16,7 +16,7 @@ nav_order: 6
     </p>
   </div>
 
-  {%- if site.data.memories.size == 0 -%}
+  {%- if site.data.memories.memories.size == 0 -%}
   <div class="memories-empty" style="display:flex;">
     <i class="fas fa-photo-video"></i>
     <p>Nothing here yet — check back soon for photos and videos from the field.</p>
@@ -35,7 +35,7 @@ nav_order: 6
 
   <!-- Memory grid -->
   <div class="memories-grid" id="memoriesGrid">
-    {%- assign sorted_memories = site.data.memories | sort: "date" | reverse -%}
+    {%- assign sorted_memories = site.data.memories.memories | sort: "date" | reverse -%}
     {%- for memory in sorted_memories -%}
     <div class="memory-card" data-type="{{ memory.type }}" data-tags="{{ memory.tags | join: ' ' }}">
 

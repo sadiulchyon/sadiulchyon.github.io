@@ -1,0 +1,13 @@
+{
+  "name": "cms-oauth",
+  "description": "GitHub OAuth handshake for Decap CMS, deployed as a Firebase Cloud Function.",
+  "engines": {
+    "node": "20"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.19.2",
+    "firebase-functions": "^5.0.0"
+  },
+  "private": true
+}

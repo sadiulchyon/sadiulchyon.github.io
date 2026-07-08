@@ -9,3 +9,6 @@ _site
 #Gemfile.lock
 vendor
 node_modules
+cms-oauth/functions/.env
+cms-oauth/.firebaserc
+cms-oauth/firebase-debug.log
