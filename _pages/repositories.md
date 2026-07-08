@@ -3,7 +3,7 @@ layout: page
 permalink: /repos/
 title: job trail
 description: A chronological trail through research, teaching, and professional roles.
-nav: true
+nav: false
 nav_order: 3
 ---
 
