@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="robots" content="noindex" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Memories admin</title>
+  <title>Site admin</title>
   <style>
     :root { color-scheme: light dark; }
     body {
@@ -24,7 +24,7 @@
     }
     .card img { max-width: 160px; max-height: 120px; object-fit: cover; border-radius: 4px; display: block; margin-bottom: .5rem; }
     label { display: block; font-size: .8rem; font-weight: 600; margin-top: .6rem; }
-    input[type=text], input[type=date], textarea, select {
+    input[type=text], input[type=date], input[type=number], textarea, select {
       width: 100%;
       box-sizing: border-box;
       padding: .4rem;
@@ -32,6 +32,7 @@
       margin-top: .2rem;
     }
     textarea { min-height: 3.5rem; }
+    textarea.body { min-height: 8rem; font-family: ui-monospace, monospace; }
     button {
       cursor: pointer;
       padding: .5rem 1rem;
@@ -44,18 +45,26 @@
     button.secondary { background: transparent; color: inherit; }
     button.danger { background: #b91c1c; }
     .row { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; margin-top: .75rem; }
+    .checkbox-row { display: flex; align-items: center; gap: .4rem; margin-top: .6rem; }
+    .checkbox-row label { margin: 0; }
     #status { margin: 1rem 0; padding: .6rem 1rem; border-radius: 6px; display: none; }
     #status.ok { display: block; background: #16a34a22; border: 1px solid #16a34a; }
     #status.err { display: block; background: #b91c1c22; border: 1px solid #b91c1c; }
     #gate { max-width: 400px; margin: 4rem auto; text-align: center; }
     #app { display: none; }
+    .tabs { display: flex; gap: .5rem; border-bottom: 1px solid #8884; margin-bottom: 1rem; }
+    .tab-btn { background: none; border: none; color: inherit; font-weight: 600; padding: .6rem 1rem; border-radius: 0; opacity: .6; }
+    .tab-btn.active { opacity: 1; border-bottom: 2px solid #2563eb; }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    .item-status { font-size: .8rem; margin-left: .5rem; opacity: .8; }
   </style>
 </head>
 <body>
 
   <div id="gate">
-    <h1>Memories admin</h1>
-    <p>Enter the admin password to edit photos and captions.</p>
+    <h1>Site admin</h1>
+    <p>Enter the admin password to edit memories, projects, and news.</p>
     <input type="text" id="passwordInput" placeholder="Password" style="width:100%; padding:.6rem;" />
     <div class="row" style="justify-content:center;">
       <button id="unlockBtn">Unlock</button>
@@ -63,19 +72,43 @@
   </div>
 
   <div id="app">
-    <h1>Memories admin</h1>
-    <p><a href="/memories/">View the live Memories page →</a></p>
+    <h1>Site admin</h1>
     <div id="status"></div>
 
-    <h2>Existing memories</h2>
-    <div id="list"></div>
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="memories">Memories</button>
+      <button class="tab-btn" data-tab="projects">Projects</button>
+      <button class="tab-btn" data-tab="news">News</button>
+    </div>
 
-    <h2>Add a new memory</h2>
-    <div class="card" id="newCard"></div>
+    <!-- Memories tab -->
+    <div class="tab-panel active" id="tab-memories">
+      <p><a href="/memories/">View the live Memories page →</a></p>
+      <h2>Existing memories</h2>
+      <div id="memoriesList"></div>
+      <h2>Add a new memory</h2>
+      <div class="card" id="newMemoryCard"></div>
+      <div class="row">
+        <button id="saveMemoriesBtn">Save all changes</button>
+      </div>
+    </div>
 
-    <div class="row">
-      <button id="saveBtn">Save all changes</button>
-      <span id="saveHint" style="font-size:.85rem; opacity:.7;"></span>
+    <!-- Projects tab -->
+    <div class="tab-panel" id="tab-projects">
+      <p><a href="/projects/">View the live Projects page →</a></p>
+      <h2>Existing projects</h2>
+      <div id="projectsList"></div>
+      <h2>Add a new project</h2>
+      <div class="card" id="newProjectCard"></div>
+    </div>
+
+    <!-- News tab -->
+    <div class="tab-panel" id="tab-news">
+      <p><a href="/">View the live site (news shows on the About page) →</a></p>
+      <h2>Existing news</h2>
+      <div id="newsList"></div>
+      <h2>Add a news item</h2>
+      <div class="card" id="newNewsCard"></div>
     </div>
   </div>
 
@@ -84,53 +117,103 @@
     const FUNCTION_BASE = "https://us-central1-personal-website-e7699.cloudfunctions.net/memoriesAdmin";
 
     const gate = document.getElementById("gate");
-    const app = document.getElementById("app");
-    const listEl = document.getElementById("list");
-    const newCardEl = document.getElementById("newCard");
+    const appEl = document.getElementById("app");
     const statusEl = document.getElementById("status");
 
-    let password = sessionStorage.getItem("memoriesAdminPassword") || "";
-    let memories = [];
-    let sha = null;
-    let pendingUploads = []; // { index: number|"new", file: File }
-    let newEntryImagePreview = null;
+    let password = sessionStorage.getItem("adminPassword") || "";
 
     document.getElementById("unlockBtn").addEventListener("click", () => {
       password = document.getElementById("passwordInput").value;
-      sessionStorage.setItem("memoriesAdminPassword", password);
-      loadMemories();
+      sessionStorage.setItem("adminPassword", password);
+      loadAll();
+    });
+
+    document.querySelectorAll(".tab-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+        document.querySelectorAll(".tab-panel").forEach(p => p.classList.remove("active"));
+        btn.classList.add("active");
+        document.getElementById(`tab-${btn.dataset.tab}`).classList.add("active");
+      });
     });
 
     function showStatus(kind, message) {
       statusEl.className = kind;
       statusEl.textContent = message;
+      setTimeout(() => { statusEl.className = ""; }, 6000);
     }
 
-    async function loadMemories() {
+    function field(labelText, type, value, onChange) {
+      const wrapper = document.createElement("div");
+      const label = document.createElement("label");
+      label.textContent = labelText;
+      wrapper.appendChild(label);
+      const input = document.createElement(type === "textarea" || type === "body" ? "textarea" : "input");
+      if (type !== "textarea" && type !== "body") input.type = type;
+      if (type === "body") input.className = "body";
+      input.value = value || "";
+      input.addEventListener("input", () => onChange(type === "number" ? Number(input.value) : input.value));
+      wrapper.appendChild(input);
+      return wrapper;
+    }
+
+    function checkboxField(labelText, checked, onChange) {
+      const wrapper = document.createElement("div");
+      wrapper.className = "checkbox-row";
+      const input = document.createElement("input");
+      input.type = "checkbox";
+      input.checked = !!checked;
+      input.addEventListener("change", () => onChange(input.checked));
+      const label = document.createElement("label");
+      label.textContent = labelText;
+      wrapper.appendChild(input);
+      wrapper.appendChild(label);
+      return wrapper;
+    }
+
+    function fileToBase64(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result.split(",")[1]);
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+    }
+
+    async function loadAll() {
       try {
-        const res = await fetch(`${FUNCTION_BASE}/memories`);
-        const data = await res.json();
-        if (!res.ok) throw new Error(data.error || "Failed to load memories.");
-        memories = data.memories;
-        sha = data.sha;
+        await Promise.all([loadMemories(), loadProjects(), loadNews()]);
         gate.style.display = "none";
-        app.style.display = "block";
-        render();
+        appEl.style.display = "block";
       } catch (err) {
-        alert("Couldn't load memories: " + err.message + "\n\nCheck that FUNCTION_BASE in this page is set correctly.");
+        alert("Couldn't load the admin panel: " + err.message + "\n\nCheck that FUNCTION_BASE in this page is set correctly, and that the password is right.");
       }
     }
 
-    function render() {
-      listEl.innerHTML = "";
-      memories.forEach((memory, index) => {
-        listEl.appendChild(renderCard(memory, index));
-      });
-      newCardEl.innerHTML = "";
-      newCardEl.appendChild(renderCard({ title: "", description: "", date: "", tags: [], type: "photo", image: "" }, "new"));
+    // ---------------- Memories ----------------
+    let memories = [];
+    let memoriesSha = null;
+    let pendingUploads = [];
+
+    async function loadMemories() {
+      const res = await fetch(`${FUNCTION_BASE}/memories`);
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Failed to load memories.");
+      memories = data.memories;
+      memoriesSha = data.sha;
+      renderMemories();
     }
 
-    function renderCard(memory, index) {
+    function renderMemories() {
+      const listEl = document.getElementById("memoriesList");
+      listEl.innerHTML = "";
+      memories.forEach((memory, index) => listEl.appendChild(renderMemoryCard(memory, index)));
+      const newCardEl = document.getElementById("newMemoryCard");
+      newCardEl.innerHTML = "";
+      newCardEl.appendChild(renderMemoryCard({ title: "", description: "", date: "", tags: [], type: "photo", image: "" }, "new"));
+    }
+
+    function renderMemoryCard(memory, index) {
       const card = document.createElement("div");
       card.className = "card";
 
@@ -189,7 +272,7 @@
             pendingUploads = pendingUploads.filter(u => u.index !== "new");
             pendingUploads.push({ index: memories.length - 1, file: upload.file });
           }
-          render();
+          renderMemories();
         });
         row.appendChild(addBtn);
       } else {
@@ -199,39 +282,16 @@
         delBtn.addEventListener("click", () => {
           if (confirm(`Delete "${memory.title}"?`)) {
             memories.splice(index, 1);
-            render();
+            renderMemories();
           }
         });
         row.appendChild(delBtn);
       }
       card.appendChild(row);
-
       return card;
     }
 
-    function field(labelText, type, value, onChange) {
-      const wrapper = document.createElement("div");
-      const label = document.createElement("label");
-      label.textContent = labelText;
-      wrapper.appendChild(label);
-      const input = document.createElement(type === "textarea" ? "textarea" : "input");
-      if (type !== "textarea") input.type = type;
-      input.value = value || "";
-      input.addEventListener("input", () => onChange(input.value));
-      wrapper.appendChild(input);
-      return wrapper;
-    }
-
-    function fileToBase64(file) {
-      return new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.onload = () => resolve(reader.result.split(",")[1]);
-        reader.onerror = reject;
-        reader.readAsDataURL(file);
-      });
-    }
-
-    document.getElementById("saveBtn").addEventListener("click", async () => {
+    document.getElementById("saveMemoriesBtn").addEventListener("click", async () => {
       showStatus("ok", "Saving…");
       try {
         for (const upload of pendingUploads) {
@@ -250,19 +310,196 @@
         const res = await fetch(`${FUNCTION_BASE}/memories`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ password, sha, memories }),
+          body: JSON.stringify({ password, sha: memoriesSha, memories }),
         });
         const data = await res.json();
         if (!res.ok) throw new Error(data.error || "Save failed.");
-        sha = data.sha;
+        memoriesSha = data.sha;
         showStatus("ok", "Saved! The site will rebuild in a minute or two.");
-        render();
+        renderMemories();
       } catch (err) {
         showStatus("err", "Error: " + err.message);
       }
     });
 
-    if (password) loadMemories();
+    // ---------------- Projects & News (shared logic) ----------------
+    let projects = [];
+    let newsItems = [];
+
+    async function loadProjects() {
+      const res = await fetch(`${FUNCTION_BASE}/projects`);
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Failed to load projects.");
+      projects = data.items;
+      renderProjects();
+    }
+
+    async function loadNews() {
+      const res = await fetch(`${FUNCTION_BASE}/news`);
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Failed to load news.");
+      newsItems = data.items;
+      renderNews();
+    }
+
+    function renderProjects() {
+      const listEl = document.getElementById("projectsList");
+      listEl.innerHTML = "";
+      projects.forEach(item => listEl.appendChild(renderProjectCard(item, false)));
+      const newCardEl = document.getElementById("newProjectCard");
+      newCardEl.innerHTML = "";
+      newCardEl.appendChild(renderProjectCard(
+        { title: "", description: "", img: "", importance: projects.length + 1, category: "research", body: "" },
+        true
+      ));
+    }
+
+    function renderProjectCard(item, isNew) {
+      const card = document.createElement("div");
+      card.className = "card";
+
+      card.appendChild(field("Title", "text", item.title, v => item.title = v));
+      card.appendChild(field("Description (short, shown on the card)", "text", item.description, v => item.description = v));
+      card.appendChild(field("Image path (e.g. assets/img/publications/foo.jpg)", "text", item.img, v => item.img = v));
+      card.appendChild(field("Importance (lower shows first)", "number", item.importance, v => item.importance = v));
+
+      const catLabel = document.createElement("label");
+      catLabel.textContent = "Category";
+      card.appendChild(catLabel);
+      const catSelect = document.createElement("select");
+      ["research", "engineering"].forEach(opt => {
+        const o = document.createElement("option");
+        o.value = opt; o.textContent = opt;
+        if ((item.category || "research") === opt) o.selected = true;
+        catSelect.appendChild(o);
+      });
+      catSelect.addEventListener("change", () => item.category = catSelect.value);
+      card.appendChild(catSelect);
+
+      card.appendChild(field("Body (markdown)", "body", item.body, v => item.body = v));
+
+      const row = document.createElement("div");
+      row.className = "row";
+      const saveBtn = document.createElement("button");
+      saveBtn.textContent = isNew ? "Create project" : "Save changes";
+      const statusSpan = document.createElement("span");
+      statusSpan.className = "item-status";
+      saveBtn.addEventListener("click", async () => {
+        if (!item.title) { alert("Give the project a title first."); return; }
+        statusSpan.textContent = "Saving…";
+        try {
+          const res = await fetch(`${FUNCTION_BASE}/projects`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ password, path: item.path, sha: item.sha, ...item }),
+          });
+          const data = await res.json();
+          if (!res.ok) throw new Error(data.error || "Save failed.");
+          statusSpan.textContent = "Saved.";
+          await loadProjects();
+        } catch (err) {
+          statusSpan.textContent = "Error: " + err.message;
+        }
+      });
+      row.appendChild(saveBtn);
+      row.appendChild(statusSpan);
+
+      if (!isNew) {
+        const delBtn = document.createElement("button");
+        delBtn.className = "danger";
+        delBtn.textContent = "Delete";
+        delBtn.addEventListener("click", async () => {
+          if (!confirm(`Delete "${item.title}"? This can't be undone here.`)) return;
+          try {
+            const res = await fetch(`${FUNCTION_BASE}/projects`, {
+              method: "DELETE",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ password, path: item.path, sha: item.sha }),
+            });
+            const data = await res.json();
+            if (!res.ok) throw new Error(data.error || "Delete failed.");
+            await loadProjects();
+          } catch (err) {
+            alert("Error deleting: " + err.message);
+          }
+        });
+        row.appendChild(delBtn);
+      }
+      card.appendChild(row);
+      return card;
+    }
+
+    function renderNews() {
+      const listEl = document.getElementById("newsList");
+      listEl.innerHTML = "";
+      newsItems.forEach(item => listEl.appendChild(renderNewsCard(item, false)));
+      const newCardEl = document.getElementById("newNewsCard");
+      newCardEl.innerHTML = "";
+      const today = new Date().toISOString().slice(0, 10);
+      newCardEl.appendChild(renderNewsCard({ date: today, inline: true, title: "", body: "" }, true));
+    }
+
+    function renderNewsCard(item, isNew) {
+      const card = document.createElement("div");
+      card.className = "card";
+
+      card.appendChild(field("Date", "date", (item.date || "").toString().slice(0, 10), v => item.date = v));
+      card.appendChild(checkboxField("Inline (short one-liner, no title needed)", item.inline, v => item.inline = v));
+      card.appendChild(field("Title (only used if not inline)", "text", item.title, v => item.title = v));
+      card.appendChild(field("Body (markdown, or just the one-line announcement if inline)", "body", item.body, v => item.body = v));
+
+      const row = document.createElement("div");
+      row.className = "row";
+      const saveBtn = document.createElement("button");
+      saveBtn.textContent = isNew ? "Create news item" : "Save changes";
+      const statusSpan = document.createElement("span");
+      statusSpan.className = "item-status";
+      saveBtn.addEventListener("click", async () => {
+        if (!item.body) { alert("Write the announcement body first."); return; }
+        statusSpan.textContent = "Saving…";
+        try {
+          const res = await fetch(`${FUNCTION_BASE}/news`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ password, path: item.path, sha: item.sha, ...item, title: item.inline ? undefined : item.title }),
+          });
+          const data = await res.json();
+          if (!res.ok) throw new Error(data.error || "Save failed.");
+          statusSpan.textContent = "Saved.";
+          await loadNews();
+        } catch (err) {
+          statusSpan.textContent = "Error: " + err.message;
+        }
+      });
+      row.appendChild(saveBtn);
+      row.appendChild(statusSpan);
+
+      if (!isNew) {
+        const delBtn = document.createElement("button");
+        delBtn.className = "danger";
+        delBtn.textContent = "Delete";
+        delBtn.addEventListener("click", async () => {
+          if (!confirm("Delete this news item? This can't be undone here.")) return;
+          try {
+            const res = await fetch(`${FUNCTION_BASE}/news`, {
+              method: "DELETE",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ password, path: item.path, sha: item.sha }),
+            });
+            const data = await res.json();
+            if (!res.ok) throw new Error(data.error || "Delete failed.");
+            await loadNews();
+          } catch (err) {
+            alert("Error deleting: " + err.message);
+          }
+        });
+        row.appendChild(delBtn);
+      }
+      card.appendChild(row);
+      return card;
+    }
+
+    if (password) loadAll();
   </script>
 </body>
 </html>
