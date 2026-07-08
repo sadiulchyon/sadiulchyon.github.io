@@ -3,7 +3,7 @@ layout: page
 permalink: /portfolio/
 title: teaching portfolio
 description: Teaching and mentoring experience in geography, GIS, remote sensing, and hydraulics.
-nav: true
+nav: false
 nav_order: 5
 ---
 

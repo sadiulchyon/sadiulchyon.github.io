@@ -22,22 +22,18 @@ nav_order: 6
     <p>Nothing here yet — check back soon for photos and videos from the field.</p>
   </div>
   {%- else -%}
-  <!-- Filter tags -->
+  <!-- Filters -->
   <div class="memories-filters" id="memoriesFilters">
     <button class="memory-filter-btn active" data-filter="all">All</button>
     <button class="memory-filter-btn" data-filter="photo"><i class="fas fa-camera"></i> Photos</button>
     <button class="memory-filter-btn" data-filter="video"><i class="fas fa-film"></i> Videos</button>
-    <button class="memory-filter-btn" data-filter="fieldwork">Fieldwork</button>
-    <button class="memory-filter-btn" data-filter="lab">Lab</button>
-    <button class="memory-filter-btn" data-filter="conference">Conference</button>
-    <button class="memory-filter-btn" data-filter="milestone">Milestone</button>
   </div>
 
   <!-- Memory grid -->
   <div class="memories-grid" id="memoriesGrid">
     {%- assign sorted_memories = site.data.memories.memories | sort: "date" | reverse -%}
     {%- for memory in sorted_memories -%}
-    <div class="memory-card" data-type="{{ memory.type }}" data-tags="{{ memory.tags | join: ' ' }}">
+    <div class="memory-card" data-type="{{ memory.type }}">
 
       <!-- Media -->
       <div class="memory-media">
@@ -68,16 +64,7 @@ nav_order: 6
 
       <!-- Content -->
       <div class="memory-content">
-        <div class="memory-meta">
-          <time class="memory-date">{{ memory.date | date: "%B %Y" }}</time>
-          {%- if memory.tags -%}
-          <div class="memory-tags">
-            {%- for tag in memory.tags -%}
-            <span class="memory-tag">{{ tag }}</span>
-            {%- endfor -%}
-          </div>
-          {%- endif -%}
-        </div>
+        <time class="memory-date">{{ memory.date | date: "%B %Y" }}</time>
         <h3 class="memory-title">{{ memory.title }}</h3>
         <p class="memory-description">{{ memory.description }}</p>
       </div>
@@ -113,8 +100,7 @@ nav_order: 6
       var visible = 0;
       cards.forEach(function (card) {
         var type = card.getAttribute('data-type');
-        var tags = card.getAttribute('data-tags');
-        var show = filter === 'all' || type === filter || tags.indexOf(filter) !== -1;
+        var show = filter === 'all' || type === filter;
         card.style.display = show ? '' : 'none';
         if (show) visible++;
       });
